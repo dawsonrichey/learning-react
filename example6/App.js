@@ -9,10 +9,14 @@ Namaste React using JSX
 );
 
 const number = 10000;
+
+// const data = api.getData();
+
 // Component Composition
 const HeadingComponent = () => (
     <div className="container">
-        {number}
+        {/* {data} */}
+        {Title()}
         <h1 className="headng">Namaste React Fucntional Component</h1>
         <Title />
     </div>
