@@ -1,0 +1,31 @@
+git init
+git branch -M main
+git add .
+git commit -m "episode-01"
+git remote add origin https://github.com/dawsonrichey/learning-react.git
+git push origin main
+
+
+npm init
+npm install -D parcel
+
+npm install
+
+npx parcel index.html
+
+
+npm install react
+npm i react
+npm install react-dom
+npm i react-dom
+
+
+npx parcel build index.html
+
+
+
+
+start with index.html, app.js, index.css, and package.json
+npm init
+npm install
+npx parcel index.html
