@@ -8,10 +8,11 @@ Namaste React using JSX
 </h1>
 );
 
-
+const number = 10000;
 // Component Composition
 const HeadingComponent = () => (
     <div className="container">
+        {number}
         <h1 className="headng">Namaste React Fucntional Component</h1>
         <Title />
     </div>
