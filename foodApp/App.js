@@ -22,10 +22,36 @@ const Header = () => {
   );
 };
 
+const styleCard ={
+    backgroundColor: "yellow",
+};
+
+const ResturantCard = () => {
+  return (
+    <div className="res-card" style={styleCard}>
+      <h3>Meghana Foods</h3>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-conatainer">
+        <ResturantCard />
+      </div>
+    </div>
+  );
+};
+
 const AppLayout = () => {
-  return <div className="app">
-    <Header />
-  </div>;
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
