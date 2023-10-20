@@ -29,6 +29,7 @@ const styleCard = {
 const ResturantCard = (props) => {
   // console.log(props);
   const {resData} = props;
+  const {name,cuisines, sla, avgRating, cloudinaryImageId} = resData?.info;
   return (
     <div className="res-card" style={styleCard}>
       <h3>Meghana Foods</h3>
@@ -39,10 +40,10 @@ const ResturantCard = (props) => {
 
         // src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png"
       ></img>
-      <h3>{resData.info.name}</h3>
-      <h4>{resData.info.cuisines.join(', ')}</h4>
-      <h4>{resData.info.avgRating}</h4>
-      <h4>{resData.info.sla.slaString}</h4>
+      <h3>{name}</h3>
+      <h4>{cuisines.join(', ')}</h4>
+      <h4>{avgRating}</h4>
+      <h4>{sla.slaString}</h4>
     </div>
   );
 };
