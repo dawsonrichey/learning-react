@@ -18,5 +18,9 @@
   "homepage": "https://github.com/dawsonrichey/learning-react#readme",
   "devDependencies": {
     "parcel": "^2.10.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
