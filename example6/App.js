@@ -1,21 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React.createElement => ReactElement-JS Object => HTMLElement (render)
-
-const heading = React.createElement("h1", { id: "heading" }, "Namaste React");
-
-console.log(heading);
-
-// JSX (transpiled before it reaches the JS) - PARCEL - Babel
-const jsxHeading = <h1 id="heading" className="new">dfgdfgdf</h1>;
-
-const jsxHeading2 = (<h1 className="head">
+// React Element
+const heading = (
+<h1 className="head">
 Namaste React using JSX</h1>
 );
 
-console.log(jsxHeading);
+
+// React Functional Component
+const HeadingComponent = () => {
+    return <h1>Namaste React Fucntional Component</h1>;
+};
+
+// Class Based Component - OLD
+// Functional Component - NEW
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+root.render(heading);
