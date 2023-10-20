@@ -36,7 +36,7 @@ const ResturantCard = () => {
 
 const Body = () => {
   return (
-    <div className="body">
+    <div className="body" style={{backgroundColor: "blue"}}>
       <div className="search">Search</div>
       <div className="res-conatainer">
         <ResturantCard />
