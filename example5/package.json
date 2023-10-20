@@ -1,0 +1,22 @@
+{
+  "name": "example5",
+  "version": "1.0.0",
+  "description": "Learning React Ep 2",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawsonrichey/learning-react.git"
+  },
+  "author": "Dawson Richey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawsonrichey/learning-react/issues"
+  },
+  "homepage": "https://github.com/dawsonrichey/learning-react#readme",
+  "devDependencies": {
+    "parcel": "^2.10.0"
+  }
+}
