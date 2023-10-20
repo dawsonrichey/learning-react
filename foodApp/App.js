@@ -993,16 +993,9 @@ const Body = () => {
     <div className="body" style={{ backgroundColor: "blue" }}>
       <div className="search">Search</div>
       <div className="res-container">
-        {/* <ResturantCard resData={resObj} /> */}
-        <ResturantCard resData={resList[0]} />
-        <ResturantCard resData={resList[1]} />
-        <ResturantCard resData={resList[2]} />
-        {/* <ResturantCard resData={resObj} /> */}
-        {/* <ResturantCard
-          resName="Meghana Foods"
-          cuisine="Biryani, North Indian, Asian"
-        />
-        <ResturantCard resName="KFC" cuisine="Burger, Fast Food" /> */}
+{
+    resList.map(resturant => <ResturantCard resData={resturant}/>)
+}
       </div>
     </div>
   );
