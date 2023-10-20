@@ -994,7 +994,7 @@ const Body = () => {
       <div className="search">Search</div>
       <div className="res-container">
 {
-    resList.map(resturant => <ResturantCard resData={resturant}/>)
+    resList.map((resturant, index) => <ResturantCard key={index} resData={resturant}/>)
 }
       </div>
     </div>
