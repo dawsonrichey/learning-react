@@ -10,6 +10,10 @@ console.log(heading);
 // JSX (transpiled before it reaches the JS) - PARCEL - Babel
 const jsxHeading = <h1 id="heading" className="new">dfgdfgdf</h1>;
 
+const jsxHeading2 = (<h1 className="head">
+Namaste React using JSX</h1>
+);
+
 console.log(jsxHeading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
