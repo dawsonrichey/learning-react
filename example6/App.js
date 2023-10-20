@@ -9,13 +9,11 @@ Namaste React using JSX</h1>
 
 
 // React Functional Component
-// const HeadingComponent = () => {
-//     return <h1>Namaste React Fucntional Component</h1>;
-// };
-
 const HeadingComponent = () => (
 <h1 className="headng">Namaste React Fucntional Component</h1>
 );
+
+
 // Class Based Component - OLD
 // Functional Component - NEW
 
@@ -24,4 +22,5 @@ const HeadingComponent = () => (
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+// root.render(heading);
+root.render(<HeadingComponent />);
