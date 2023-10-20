@@ -14,6 +14,7 @@ npm init
 npm install -D parcel
 npm install react
 npm install react-dom
+npm start
 ```
 
 
@@ -24,5 +25,13 @@ add
     "last 2 versions"
  ]
  ```
+and add
 
+```
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+```
  to package.json file
