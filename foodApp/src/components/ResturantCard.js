@@ -1,4 +1,4 @@
-import { CON_URL } from "../utils/constants";
+import { CDN_URL } from "../utils/constants";
 
 const styleCard = {
     backgroundColor: "yellow",
@@ -15,7 +15,7 @@ const ResturantCard = (props) => {
         <img
           className="res-logo"
           alt="res-logo"
-          src={CON_URL + cloudinaryImageId}
+          src={CDN_URL + cloudinaryImageId}
   
         ></img>
         <h3>{name}</h3>
