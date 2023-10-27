@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Body = () => {
 // Local State Variable * Super powerful variable
-let [listOfRestaurants] = useState([
+const [listOfRestaurants, setListOfRestaurant] = useState([
     {
     info: {
       id: "334475",
@@ -76,10 +76,10 @@ let [listOfRestaurants] = useState([
       <div className="filter">
       <button className="filter-btn" 
       onClick={() => {
-        // Filter Logic here
-        listOfRestaurants = listOfRestaurants.filter(
-        (res) => res.info.avgRating > 4);
-        console.log(listOfRestaurants);
+ const filteredList =  listOfRestaurants.filter(
+          (res) => res.info.avgRating > 4
+          );
+          setListOfRestaurant(filteredList);
       }}>Top Rated Restaurants button</button>
         </div>
       <div className="res-container">
