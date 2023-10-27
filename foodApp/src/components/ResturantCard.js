@@ -1,7 +1,7 @@
 import { CDN_URL } from "../utils/constants";
 
 const styleCard = {
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow", /
   };
 
   
