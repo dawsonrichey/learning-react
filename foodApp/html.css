@@ -1,45 +1,35 @@
-.header{
-    /* color: red; */
+.header {
     display: flex;
-    justify-content: space-between;
-    border: 2px solid black;
+    justify-content: space-between ;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.nav-items > ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
 }
 
 .logo {
-    width: 200px;
-    }
-.nav-items {
-    padding: 0px 20px;
-    }
-.nav-items > ul {
-    font: 23px;
-    display: flex;
-    list-style-type: none;
+    width: 100px;
 }
-.nav-items > ul > li{
-    padding: 10px;
-    margin: 10px
-    }
 
-.res-card{
-width: 200px;
-height: 300px;
-padding: 0 15px;
+.card{
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
-.res-container{
+
+.card > img {
+    width: 100%;
+}
+
+.restaurant-list {
     display: flex;
     flex-wrap: wrap;
 }
-.res-card:hover{
-    cursor: pointer;
-    border: 1px solid black;
-    }
-.search{
-padding: 10px;}
-
-.res-card img {
-    width: 100%;
-}
-.res-Logo {
-    width: 190px;
-    }
