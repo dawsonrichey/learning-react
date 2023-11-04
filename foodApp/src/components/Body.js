@@ -1,93 +1,55 @@
-import ResturantCard from "./ResturantCard";
-import resList from "../utils/mockData";
+import { restaurantList } from "../utils/constants";
+import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 
+// What is state
+// what is React Hooks? - functions,
+// What is useState
 
+function filterData(searchText, restaurants) {
+  const filterData = restaurants.filter((restaurant) =>
+    restaurant.data.name.includes(searchText)
+  );
+
+  return filterData;
+}
 
 const Body = () => {
-// Local State Variable * Super powerful variable
-const [listOfRestaurants, setListOfRestaurant] = useState([
-    {
-    info: {
-      id: "334475",
-      name: "KFC",
-      cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-      cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-      costForTwo: 40000,
-      deliveryTime: 36,
-      avgRating: "3.8",
-      sla: {
-        deliveryTime: 19,
-        lastMileTravel: 0.1,
-        serviceability: "SERVICEABLE",
-        slaString: "19 mins",
-        lastMileTravelString: "0.1 km",
-        iconType: "ICON_TYPE_EMPTY",
-      }
-      },
-      
-  },
-  {
-    info: {
-      id: "334275",
-      name: "Domino",
-      cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-      cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-      costForTwo: 40000,
-      deliveryTime: 36,
-      avgRating: "8",
-      sla: {
-        deliveryTime: 19,
-        lastMileTravel: 0.1,
-        serviceability: "SERVICEABLE",
-        slaString: "19 mins",
-        lastMileTravelString: "0.1 km",
-        iconType: "ICON_TYPE_EMPTY",
-      }
-      },
-      
-  },
-  {
-    info: {
-      id: "3342775",
-      name: "Dom",
-      cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-      cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-      costForTwo: 40000,
-      deliveryTime: 36,
-      avgRating: "8",
-      sla: {
-        deliveryTime: 19,
-        lastMileTravel: 0.1,
-        serviceability: "SERVICEABLE",
-        slaString: "19 mins",
-        lastMileTravelString: "0.1 km",
-        iconType: "ICON_TYPE_EMPTY",
-      }
-      },
-      
-  },
-
-]);
-
+  const [restaurants, setRestaurants] = useState(restaurantList);
+  const [searchText, setSearchText] = useState("");
 
   return (
-    <div className="body">
-      <div className="filter">
-      <button className="filter-btn" 
-      onClick={() => {
- const filteredList =  listOfRestaurants.filter(
-          (res) => res.info.avgRating > 4
-          );
-          setListOfRestaurant(filteredList);
-      }}>Top Rated Restaurants button</button>
-        </div>
-      <div className="res-container">
-        {listOfRestaurants.map((resturant) => (
-          <ResturantCard key={resturant.info.id} resData={resturant} />
-        ))}
+    <>
+      <div className="search-container">
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search"
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+        />
+        <button
+          className="search-btn"
+          onClick={() => {
+            //need to filter the data
+            const data = filterData(searchText, restaurants);
+            // update the state - restaurants
+            setRestaurants(data);
+          }}
+        >
+          Search
+        </button>
       </div>
-    </div>
+      <div className="restaurant-list">
+        {restaurants.map((restaurant) => {
+          return (
+            <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
