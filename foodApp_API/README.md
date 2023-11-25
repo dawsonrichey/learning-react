@@ -76,3 +76,6 @@ import {Component} from "path";
 
 setListOfRestraunt(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 setFilteredRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+
+npm i react-router-dom
